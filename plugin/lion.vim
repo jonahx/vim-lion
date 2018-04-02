@@ -149,7 +149,7 @@ endfunction
 function! s:match_pos(mode, line, char, count, line_number, start, end)
 	if strlen(a:char) == 1
 		" Ignore the 'ignorecase' setting
-		let pattern = '\C' . escape(a:char, '~^$.')
+		let pattern = escape(a:char, '~^$.')
 	else
 		let pattern = a:char[1:]
 	endif
